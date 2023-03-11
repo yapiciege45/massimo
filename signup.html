@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <div class='min-h-screen text-white flex justify-center items-center relative'>
+        <div class="bg-[url('https://i.etsystatic.com/23444619/r/il/6a2b50/2958612098/il_fullxfull.2958612098_l692.jpg')] h-screen w-full lg:w-11/12 shadow-2xl bg-cover relative overflow-x-hidden" style="box-shadow: rgb(38, 57, 77) 0px 100px 100px -10px;">
+            <div class='flex flex-col justify-center items-center w-full h-full bg-black/50 px-2 relative'>
+                <a href="/index.html" class="absolute top-3 left-3 z-50"><i class="fa-solid fa-chevron-left text-white hover:text-[#3CC6B1] transition-all"></i></a>
+                <div class="animate-bottom-to-top w-full flex flex-col items-center">
+                    <h1 class="text-5xl font-bold">Kayıt Ol</h1>
+                    <form class="flex flex-col w-11/12 sm:w-1/2 md:w-1/4">
+                        <div class="flex w-full">
+                            <div class="flex flex-col mt-3">
+                                <label class="font-bold text-lg">Ad <span class="text-red-500">*</span></label>
+                                <input type="text" class="w-full p-3 bg-white/80 text-black rounded-3xl" placeholder="Ad">
+                            </div>
+                            <div class="flex flex-col mt-3 ml-3 items-between">
+                                <label class="font-bold text-lg">Soyad <span class="text-red-500">*</span></label>
+                                <input type="text" class="w-full p-3 bg-white/80 text-black rounded-3xl" placeholder="Soyad">
+                            </div>
+                        </div>
+                        <div class="flex flex-col mt-3">
+                            <label class="font-bold text-lg">Cinsiyet <span class="text-red-500">*</span></label>
+                            <select name="gender" id="gender" class="w-full p-3 bg-white/80 text-black rounded-3xl">
+                                <option value="Erkek">Erkek</option>
+                                <option value="Kadın">Kadın</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col mt-3">
+                            <label class="font-bold text-lg">Telefon Numarası <span class="text-red-500">*</span></label>
+                            <input type="text" class="w-full p-3 bg-white/80 text-black rounded-3xl" placeholder="5555555555">
+                        </div>
+                        <div class="flex flex-col mt-3">
+                            <label class="font-bold text-lg">E-posta <span class="text-red-500">*</span></label>
+                            <input type="email" class="w-full p-3 bg-white/80 text-black rounded-3xl" placeholder="E-posta">
+                        </div>
+                        <div class="flex flex-col mt-3">
+                            <label class="font-bold text-lg">Şifre <span class="text-red-500">*</span></label>
+                            <input type="password" class="w-full p-3 bg-white/80 text-black rounded-3xl" placeholder="******">
+                        </div>
+                        <div class="w-full flex justify-end items-center mt-3">
+                            <a class="text-[#3CC6B1] font-bold hover:text-[#32ad9b] transition-all cursor-pointer">Şifremi Unuttum</a>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center items-center bg-[#3CC6B1] hover:bg-[#32ad9b] transition-all text-white font-bold rounded-3xl p-3 mt-5">Kayıt Ol</button>
+                        <a href="signin.html" class="mt-3 text-center text-xl">Hesabın var mı? <span class="text-[#3CC6B1] font-bold hover:text-[#32ad9b] transition-all cursor-pointer">Giriş Yap</span></a>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
