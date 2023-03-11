@@ -22,7 +22,7 @@ module.exports = {
         },
         vanishingToTop: {
           '0%': { transform: 'translateY(0)', opacity: '1' },
-          '100%': { transform: 'translateY(-400px)', opacity: '0' },
+          '100%': { transform: 'translateY(-10000px)', opacity: '0' },
         },
         pickUpLoad: {
           '0%': { transform: 'translateY(2000px)' },
@@ -31,6 +31,10 @@ module.exports = {
         basketLoad: {
           '0%': { transform: 'translateX(2000px)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        modalLoad: {
+          '0%': { transform: 'translateY(2000px) translateX(-50%)', opacity: '0' },
+          '100%': { transform: 'translateY(-50%) translateX(-50%)', opacity: '1' },
         }
       },
       animation: {
@@ -40,6 +44,7 @@ module.exports = {
         'vanishing-to-top': 'vanishingToTop .5s forwards',
         'pickup-load': 'pickUpLoad .8s forwards',
         'basket-load': 'pickUpLoad 1s forwards',
+        'modal-load': 'modalLoad .5s forwards'
       }
     },
   },

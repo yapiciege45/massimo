@@ -8,6 +8,120 @@
     <link href="/css/output.css" rel="stylesheet">
 </head>
 <body>
+    <div id="backdrop" class="absolute w-full h-screen bg-black/80 z-40" style="display: none;" onclick="closeModals()"></div>
+    <div id="modaltomatosoup" class="modal h-[90vh] w-10/12 md:w-1/2 xl:w-1/4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-50 rounded-xl animate-modal-load" style="display: none;">
+      <div class="w-full h-full relative overflow-y-scroll max-h-[90vh]">
+        <img class="rounded-xl w-full fixed top-0" src="assets/tomatosoup.jpg" alt="">
+        <div class="flex flex-col absolute top-0 w-full rounded-xl">
+          <div class="fixed bottom-0 w-full h-20 p-3 rounded-xl">
+            <div class="w-full h-full bg-[#3CC6B1] hover:bg-[#2ea593] transition-all text-white font-bold flex justify-center items-center z-50 rounded-xl cursor-pointer">Add CHF 11.0</div>
+          </div>
+          <div class="w-full h-80"></div>
+          <i class="fa-solid fa-xmark fixed top-3 right-3 text-3xl" onclick="closeModals()"></i>
+          <div class="bg-white rounded-xl w-full p-5 flex flex-col">
+            <h1 class="text-2xl font-bold text-center">Tomato Soup</h1>
+            <p class="mt-2 text-center">Tomato soup with basil and sour cream</p>
+            <div class="w-full mt-5">
+              <form>
+              <h3 class="text-xl font-bold text-left">Extras</h3>
+              <div class="flex justify-between items-center w-full mt-2">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="pork">Pork</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="beef">Beef</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+              <div class="flex justify-between items-center w-full">
+                <div>
+                  <input type="checkbox" name="extra">
+                  <label class="text-lg font-bold mx-2" for="egg">Egg</label>
+                </div>
+                <p>+ CHF 8.00</p>
+              </div>
+            </form>
+            </div>
+            <div class="h-20 w-full bg-white"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class='h-screen text-white flex justify-center items-center relative'>
         <div class="bg-[url('https://i.etsystatic.com/23444619/r/il/6a2b50/2958612098/il_fullxfull.2958612098_l692.jpg')] h-screen w-full lg:w-11/12 shadow-2xl bg-cover" style="box-shadow: rgb(38, 57, 77) 0px 100px 100px -10px;">
           <div class='flex flex-col justify-center items-center w-full h-full bg-black/50'>
@@ -37,7 +151,7 @@
                     </a>
         </div>
         <div class='flex w-full'>
-            <div class='w-full md:w-3/4 min-h-screen animate-pickup-load'>
+            <div class='w-full md:w-3/4 min-h-screen animate-pickup-load relative'>
               <div class='h-32 fixed w-full bg-black/80 flex flex-col justify-around items-center text-white text-md'>
                 <div class="w-11/12 h-16 flex items-center justify-between">
                   <a href="/takepickup.html"><i class="fa-solid fa-chevron-left text-white hover:text-[#3CC6B1] transition-all"></i></a>
@@ -54,7 +168,7 @@
                     <a href="/pickup.html#desserts" class="p-3 px-5 hover:bg-[#3CC6B1] transition-all rounded-lg cursor-pointer">DESSERTS</a>
                   </div>
               </div>
-              <div class='h-screen overflow-y-scroll scroll-smooth scrollbar-hide'>
+              <div class='h-screen overflow-y-scroll scroll-smooth scrollbar-hide relative'>
                 <div class='h-32'></div>
                 <div id="appetizers" class='h-32 bg-[url("https://takeaway.demo.yoordi.app/ups/?file=IMAGE-1609518539875.jpg")] bg-cover'>
                   <div class='bg-black/50 w-full h-full flex flex-col justify-center items-center'>
@@ -62,7 +176,7 @@
                     <p>Lorem ipsum dolor sit amet.</p>
                   </div>
                 </div>
-                <div class='w-full h-32 border-b flex justify-between items-center px-3 md:px-8 bg-white text-black cursor-pointer hover:bg-gray-100 transition-all'>
+                <div id="tomatosoup" class='w-full h-32 border-b flex justify-between items-center px-3 md:px-8 bg-white text-black cursor-pointer hover:bg-gray-100 transition-all' onclick="showModal(this)">
                   <div>
                     <h5 class='text-2xl font-bold'>Tomato soup</h5>
                     <p>Tomato soup with basil and sour cream</p>
@@ -294,9 +408,16 @@
                   </div>
                   <p>CHF 8.00</p>
                 </div>
+                <div class="w-full h-20 bg-white"></div>
+              </div>
+              <div class="h-20 fixed md:hidden bottom-0 w-full p-3">
+                <div class="w-full h-full rounded-xl bg-[#3CC6B1] hover:bg-[#2ea593] transition-all text-white cursor-pointer flex justify-center items-center">
+                  <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
+                  <p class="font-bold text-white mx-2">My Cart - CHF 0.00</p>
+                </div>
               </div>
             </div>
-            <div class='w-1/4 h-screen overflow-y-scroll scrollbar-hide bg-white text-black z-50 hidden md:flex relative flex-col items-center justify-center animate-basket-load'>
+            <div class='w-1/4 h-screen overflow-y-scroll scrollbar-hide bg-white text-black z-30 hidden md:flex relative flex-col items-center justify-center animate-basket-load'>
               <div class='absolute top-0 w-full h-20 flex justify-center items-center border-b'>
                 <h2 class='font-bold text-xl'>YOUR ORDER</h2>
               </div>
@@ -311,6 +432,28 @@
         </div>
     </div>
 
+    <script>
+      const backdrop = document.getElementById('backdrop')
+      const modals = document.getElementsByClassName('modal')
+
+      function showModal(e) {
+        const id = `modal${e.id}`
+        const modal = document.getElementById(id)
+        modal.style.display = 'block'
+        backdrop.style.display = 'block'
+      }
+
+      function closeModals() {
+        backdrop.style.display = 'none'
+        for (let i = 0; i < modals.length; i++) {
+          const element = modals[i];
+          element.style.display = 'none'
+          
+        }
+      }
+
+      closeModals()
+    </script>
 
     <script src="https://kit.fontawesome.com/6de428ecbe.js" crossorigin="anonymous"></script>
 </body>
