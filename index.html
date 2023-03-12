@@ -85,6 +85,21 @@
                 <div class="bar w-3/4 h-1 bg-white rounded-xl"></div>
                 <div class="bar w-1/2 h-1 bg-white rounded-xl"></div>
             </div>
+            <p class="absolute top-5 right-5 text-2xl cursor-pointer hover:text-[#3CC6B1] transition-all" onclick="toggleMenu()">
+                Gencay Kete
+            </p>
+            <div id="profileMenu" class="absolute top-12 overflow-hidden right-0 w-80 z-50 transition-all" style="max-height: 0;">
+                <div class="bg-white p-5 m-[10px]">
+                    <div class="flex flex-col items-center text-black text-xl">
+                        <a href="#" class="">Hesabım</a>
+                        <a href="#" class="mt-2">Adreslerim</a>
+                        <a href="#" class="mt-2">Önceki Siparişlerim</a>
+                        <a href="#" class="mt-2">Puanlarım</a>
+                        <a href="#" class="mt-2">Rezervasyonlarım</a>
+                        <a href="#" class="mt-2">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
             <h1 class='text-white text-4xl font-bold animate-right-to-left'>MASSIMO</h1>
             <p class='text-white text-2xl font-light mt-10 animate-left-to-right'>Welcome to Massimo App</p>
             <div class='animate-bottom-to-top'>
@@ -114,9 +129,18 @@
     </div>
 
     <script>
+        const profileMenu = document.getElementById('profileMenu')
         const mobileNav = document.getElementById('mobileNav');
         const hamburger = document.getElementById('hamburger')
         const bars = document.getElementsByClassName('bar')
+
+        function toggleMenu() {
+            if(profileMenu.style.maxHeight == '400px') {
+                profileMenu.style.maxHeight = '0'
+            } else {
+                profileMenu.style.maxHeight = '400px'
+            }
+        }
 
         hamburger.addEventListener('click', () => {
             if(mobileNav.style.left == '-4000px') {

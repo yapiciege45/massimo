@@ -495,9 +495,21 @@
                 <div class="w-11/12 h-16 flex items-center justify-between">
                   <a href="/index.html"><i class="fa-solid fa-chevron-left text-white hover:text-[#3CC6B1] transition-all"></i></a>
                   <img class="rounded-full w-14 h-14" src="https://massimo.istanbulyazilim.net/storage/settings/Tp1qmNeanTHRYCjXzt7b6rOruf9fC9bbCACSMqXO.png" alt="">
-                  <a href="signin.html" class="text-xl text-white hover:text-[#3CC6B1] transition-all">Giriş Yap</a>
+                  <p class="text-xl text-white hover:text-[#3CC6B1] transition-all" onclick="toggleMenu()">Gencay Kete</p>
+                  <div id="profileMenu" class="absolute top-12 overflow-hidden right-0 w-80 z-50 transition-all" style="max-height: 0;">
+                      <div class="bg-white p-5 m-[10px]">
+                          <div class="flex flex-col items-center text-black text-xl">
+                              <a href="#" class="">Hesabım</a>
+                              <a href="#" class="mt-2">Adreslerim</a>
+                              <a href="#" class="mt-2">Önceki Siparişlerim</a>
+                              <a href="#" class="mt-2">Puanlarım</a>
+                              <a href="#" class="mt-2">Rezervasyonlarım</a>
+                              <a href="#" class="mt-2">Çıkış Yap</a>
+                          </div>
+                      </div>
+                  </div>
                 </div>
-                  <div class='w-full overflow-x-scroll scrollbar-hide flex justify-center z-50 text-sm md:text-lg'>
+                  <div class='w-full overflow-x-scroll scrollbar-hide flex justify-center z-40 text-sm md:text-lg'>
                     <a href="/pickup.html#appetizers" class="p-3 px-5 hover:bg-[#3CC6B1] transition-all rounded-lg cursor-pointer">APPETIZERS</a>
                     <a href="/pickup.html#burger" class="p-3 px-5 hover:bg-[#3CC6B1] transition-all rounded-lg cursor-pointer">BURGER</a>
                     <a href="/pickup.html#pasta" class="p-3 px-5 hover:bg-[#3CC6B1] transition-all rounded-lg cursor-pointer">PASTA</a>
@@ -809,6 +821,7 @@
     </div>
 
     <script>
+      const profileMenu = document.getElementById('profileMenu')
       const backdrop = document.getElementById('backdrop')
       const modals = document.getElementsByClassName('modal')
 
@@ -827,6 +840,14 @@
           
         }
       }
+
+      function toggleMenu() {
+            if(profileMenu.style.maxHeight == '400px') {
+                profileMenu.style.maxHeight = '0'
+            } else {
+                profileMenu.style.maxHeight = '400px'
+            }
+        }s
 
       closeModals()
     </script>
