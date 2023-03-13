@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
@@ -48,7 +49,24 @@ module.exports = {
       }
     },
   },
+  variants: {
+    extend: {
+        backgroundColor: ['label-checked'],
+        color: ['label-checked'],
+    },
+  },
   plugins: [
     require('tailwind-scrollbar-hide'),
+    plugin(({ addVariant, e }) => {
+      addVariant('label-checked', ({ modifySelectors, separator }) => {
+          modifySelectors(
+              ({ className }) => {
+                  const eClassName = e(`label-checked${separator}${className}`); // escape class
+                  const yourSelector = 'input[type="radio"]'; // your input selector. Could be any
+                  return `${yourSelector}:checked ~ .${eClassName}`; // ~ - CSS selector for siblings
+              }
+          )
+      })
+  }),
   ],
 }
