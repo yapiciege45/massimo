@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <div class='h-screen text-white flex justify-center items-center relative'>
+        <div class="bg-[url('https://i.etsystatic.com/23444619/r/il/6a2b50/2958612098/il_fullxfull.2958612098_l692.jpg')] h-screen w-full lg:w-11/12 shadow-2xl bg-cover relative overflow-x-hidden animate-left-to-right" style="box-shadow: rgb(38, 57, 77) 0px 100px 100px -10px;">
+            <div class='flex flex-col items-center justify-center w-full h-full bg-black/50 relative'>
+                <a href="/pickup.html" class="absolute top-3 left-3 z-50"><i class="fa-solid fa-chevron-left text-black hover:text-[#3CC6B1] transition-all"></i></a>
+                <div class="flex flex-col items-center overflow-y-scroll scrollbar-hide h-screen w-full animate-bottom-to-top bg-white text-black py-3">
+                    <form class="flex flex-col w-11/12 sm:w-1/2 lg:w-11/12 xl:w-1/2">
+                        <div class="flex lg:flex-row flex-col justify-start items-center w-full mt-10">
+                            <div class="w-full lg:mr-5 flex flex-col p-5">
+                                <h1 class="text-xl font-bold text-center">Profil Bilgileri</h1>
+                                <div class="flex flex-col items-center md:flex-row mt-10">
+                                    <div class="flex flex-col items-center">
+                                        <img class="h-48 w-64 rounded-full" src="assets/tomatosoup.jpg" alt="PP" />
+                                        <label class="text-black hover:text-[#3CC6B1] transition-all mt-3 cursor-pointer">
+                                            <input type="file" class="hidden">
+                                            <p>Profil Fotoğrafı Değiştir</p>
+                                        </label>
+                                    </div>
+                                    <div class="mx-5 w-full">
+                                        <div class="flex flex-col md:flex-row w-full">
+                                            <input required type="text" class="w-full p-3 bg-white/80 text-black border-2 mt-2" placeholder="Ad">
+                                            <input required type="text" class="w-full p-3 bg-white/80 text-black border-2 mt-2 md:mx-5" placeholder="Soyad">
+                                        </div>
+                                        <div class="flex flex-col md:flex-row w-full">
+                                            <input required type="tel" class="w-full p-3 bg-white/80 text-black border-2 mt-2" placeholder="Telefon Numarası">
+                                            <input required type="email" class="w-full p-3 bg-white/80 text-black border-2 mt-2 md:mx-5" placeholder="E-posta">
+                                        </div>
+                                        <div class="flex flex-col md:flex-row w-full">
+                                            <input required type="text" class="w-full p-3 bg-white/80 text-black border-2 mt-2 " placeholder="Şifre">
+                                            <input required type="text" class="w-full p-3 bg-white/80 text-black border-2 mt-2 md:mx-5" placeholder="Tekrar Şifre">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="mt-10 w-full rounded-3xl bg-[#3CC6B1] hover:bg-[#2ea593] transition-all text-white font-bold text-xl p-3">Ödeme Yap</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const paymentSection = document.getElementById('paymentSection')
+        function changeType() {
+            const value = document.querySelector('input[name="type"]:checked').value;
+            console.log(value)
+            if(value == 'kart') {
+                paymentSection.style.display = 'flex'
+            } else {
+                paymentSection.style.display = 'none'
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/6de428ecbe.js" crossorigin="anonymous"></script>
+</body>
+</html>
